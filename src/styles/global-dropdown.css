@@ -1,0 +1,159 @@
+/* Global Dropdown Styles - Consistent across all components */
+
+.admin-dropdown {
+  appearance: none;
+  background: linear-gradient(to bottom, #ffffff, #f8fafc);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  min-width: 160px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+.admin-dropdown:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+  background: linear-gradient(to bottom, #ffffff, #f1f5f9);
+}
+
+.admin-dropdown:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15), 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.admin-dropdown:disabled {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+  color: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Dropdown options styling */
+.admin-dropdown option {
+  padding: 12px 16px;
+  background: white;
+  color: #374151;
+  font-weight: 500;
+  border-radius: 8px;
+  margin: 2px;
+}
+
+.admin-dropdown option:hover {
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+  color: #1f2937;
+}
+
+.admin-dropdown option:checked,
+.admin-dropdown option:selected {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  font-weight: 600;
+}
+
+/* Custom scrollbar for dropdowns */
+.admin-dropdown::-webkit-scrollbar {
+  width: 8px;
+}
+
+.admin-dropdown::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+.admin-dropdown::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #cbd5e1, #94a3b8);
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+}
+
+.admin-dropdown::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #94a3b8, #64748b);
+}
+
+/* Size variations */
+.admin-dropdown.admin-dropdown-sm {
+  padding: 8px 12px;
+  padding-right: 32px;
+  font-size: 13px;
+  border-radius: 8px;
+  background-size: 14px;
+  background-position: right 8px center;
+}
+
+.admin-dropdown.admin-dropdown-lg {
+  padding: 16px 20px;
+  padding-right: 48px;
+  font-size: 16px;
+  border-radius: 16px;
+  background-size: 20px;
+  background-position: right 16px center;
+}
+
+/* Color variations for different sections */
+.admin-dropdown.admin-dropdown-primary {
+  border-color: #3b82f6;
+}
+
+.admin-dropdown.admin-dropdown-primary:focus {
+  border-color: #1d4ed8;
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.15), 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin-dropdown.admin-dropdown-success {
+  border-color: #10b981;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%2310b981' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+}
+
+.admin-dropdown.admin-dropdown-success:hover {
+  border-color: #059669;
+  background: linear-gradient(to bottom, #ffffff, #f0fdf4);
+  box-shadow: 0 4px 6px rgba(16, 185, 129, 0.15);
+}
+
+.admin-dropdown.admin-dropdown-success:focus {
+  border-color: #059669;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15), 0 4px 6px rgba(16, 185, 129, 0.1);
+}
+
+.admin-dropdown.admin-dropdown-warning {
+  border-color: #f59e0b;
+}
+
+.admin-dropdown.admin-dropdown-warning:focus {
+  border-color: #d97706;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15), 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin-dropdown.admin-dropdown-danger {
+  border-color: #ef4444;
+}
+
+.admin-dropdown.admin-dropdown-danger:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15), 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .admin-dropdown {
+    min-width: 120px;
+    font-size: 13px;
+    padding: 10px 14px;
+    padding-right: 36px;
+  }
+}
